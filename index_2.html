@@ -7,23 +7,38 @@
     
 </head>
 <body>
- 
-   
-    <canvas id='canvas' style='border: 1px solid; width: 800px, height 600px'>
-
-    </canvas>
- <script>
-     //Cache a reference to the html element
-    var canvas = document.getElementById('canvas');
-    canvas.width = canvas.scrollWidth;
-    canvas.height = canvas.scrollHeight;
-    //Get a reference to the 2d drawing context / apo
-    var ctx = canvas.getContext('2d');
-    // check video for wrapping https://youtu.be/RbLvOiW0HvU?t=227
-    var image= new Image();
-    image.src='./bars.png';
-
-    ctx.drawImage(image,20,20,412,70);
+    <header> <p>H K H S </p>
+    </header>
+    <label for="f1_v1"></label>
+        <select name="f1_v1" id="f1_v1">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f1_v2"></label>
+        <select name="f1_v2" id="f1_v2">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f1_v3"></label>
+    <select name="f1_v3" id="f1_v3">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f1_v4"></label>
+        <select name="f1_v4" id="f1_v4">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+        </select>
+    </br>   
+        <canvas id='canvas' style='border: 1px solid;' width= "800" height="600">
+        
+        </canvas>
+ <script  src="script_v2.js"></script>
+  
 
 
 
