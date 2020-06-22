@@ -31,47 +31,56 @@ window.onload =function(){
 
     setInterval(mainloop,1000/50);
 
-
 }
 
 //images dimensions and scaler
 const prop= 1 //this is the scaler
 const bar_w=120*prop
 const bar_h=30*prop
-const posbar_x=20
-const posbar_y=20
+
+const initpos_x=20
+const initpos_y=20
 // voices are hats, snare , kick ...
 //voices for 30x150 test
 const voice_w=30*prop//each voice height and width
 const voice_h=150*prop
 //positions of each element
-const pos1_x=posbar_x+0*voice_w
-const pos1_y=20+bar_h
-const pos2_x=posbar_x+(1*voice_w) //20+50
-const pos2_y=20+bar_h
-const pos3_x=posbar_x+2*voice_w
-const pos3_y=20+bar_h
-const pos4_x=posbar_x+3*voice_w
-const pos4_y=20+bar_h
-
+const fig_offset_x=175 //figure offset x
 
 
 class Cuartina{
-    constructor(x_pos,y_pos,v1,v2,v3,v4){
+    constructor(fig_num,x_pos,y_pos,v1,v2,v3,v4){
+        this.fig_num=fig_num;
         this.x_pos=x_pos;
         this.y_pos=y_pos;
         this.v1=v1;
         this.v2=v2;
         this.v3=v3;
         this.v4=v4;
+        
+/// Define each voice position relative to fig_num and bar
+        this.pos1_x=initpos_x + 0*voice_w + (fig_num-1)*fig_offset_x;
+        this.pos1_y=20+bar_h;//think about second line of figs
+        
+        this.pos2_x=initpos_x+(1*voice_w) + (fig_num-1)*fig_offset_x;
+        this.pos2_y=20+bar_h;
+        
+        this.pos3_x=initpos_x+2*voice_w + (fig_num-1)*fig_offset_x;
+        this.pos3_y=20+bar_h;
+        
+        this.pos4_x=initpos_x+3*voice_w + (fig_num-1)*fig_offset_x;
+        this.pos4_y=20+bar_h;
+
+        this.initpos_x=initpos_x+(fig_num-1)*fig_offset_x;
+        this.initpos_y=initpos_y; //REMEMBER to change later
     }
-    
+
     drawFigure(){
-        drawImg(bars,posbar_x,posbar_y,bar_w,bar_h);
-        drawImg(this.v1,pos1_x,pos1_y,voice_w,voice_h);
-        drawImg(this.v2,pos2_x,pos2_y,voice_w,voice_h);
-        drawImg(this.v3,pos3_x,pos3_y,voice_w,voice_h);
-        drawImg(this.v4,pos4_x,pos4_y,voice_w,voice_h);
+        drawImg(bars,this.initpos_x,this.initpos_y,bar_w,bar_h);
+        drawImg(this.v1,this.pos1_x,this.pos1_y,voice_w,voice_h);
+        drawImg(this.v2,this.pos2_x,this.pos2_y,voice_w,voice_h);
+        drawImg(this.v3,this.pos3_x,this.pos3_y,voice_w,voice_h);
+        drawImg(this.v4,this.pos4_x,this.pos4_y,voice_w,voice_h);
     }
    
     
@@ -86,24 +95,27 @@ class Cuartina{
 
 }
 
-var cuartina1 = new Cuartina(20,20,kick);
 
 function mainloop(){
-   // colorRec(0,0,canvas.width,canvas.height,'white')
-   // idea to find objects by it's name 
-   //https://stackoverflow.com/questions/13964155/get-javascript-object-from-array-of-objects-by-value-of-property
    
   //parameters are (figure,element)
    f1_v1=switch_v(1,1);
    f1_v2=switch_v(1,2);
    f1_v3=switch_v(1,3);
    f1_v4=switch_v(1,4);
-  
-   var cuartina1 = new Cuartina(20,20,f1_v1,f1_v2,f1_v3,f1_v4);
-   cuartina1.drawFigure();
- 
-   
 
+   f2_v1=switch_v(2,1);
+   f2_v2=switch_v(2,2);
+   f2_v3=switch_v(2,3);
+   f2_v4=switch_v(2,4);
+  
+   var cuartina1 = new Cuartina(1,20,20,f1_v1,f1_v2,f1_v3,f1_v4);
+   var cuartina2 = new Cuartina(2,20,20,f2_v1,f2_v2,f2_v3,f2_v4);
+  
+   cuartina1.drawFigure();
+   cuartina2.drawFigure();
+ 
+   //print?
     console.log("this is working")
 }
 
