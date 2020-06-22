@@ -45,13 +45,13 @@ const posbar_y=20
 const voice_w=30*prop//each voice height and width
 const voice_h=150*prop
 //positions of each element
-const pos1_x=posbar_x+0*voice_w
+const pos1_x=initpos_x+0*voice_w
 const pos1_y=20+bar_h
-const pos2_x=posbar_x+(1*voice_w) //20+50
+const pos2_x=initpos_x+(1*voice_w) //20+50
 const pos2_y=20+bar_h
-const pos3_x=posbar_x+2*voice_w
+const pos3_x=initpos_x+2*voice_w
 const pos3_y=20+bar_h
-const pos4_x=posbar_x+3*voice_w
+const pos4_x=initpos_x+3*voice_w
 const pos4_y=20+bar_h
 
 
@@ -67,7 +67,7 @@ class Cuartina{
     }
     
     drawFigure(){
-        drawImg(bars,posbar_x,posbar_y,bar_w,bar_h);
+        drawImg(bars,initpos_x,initpos_y,bar_w,bar_h);
         drawImg(this.v1,pos1_x,pos1_y,voice_w,voice_h);
         drawImg(this.v2,pos2_x,pos2_y,voice_w,voice_h);
         drawImg(this.v3,pos3_x,pos3_y,voice_w,voice_h);
