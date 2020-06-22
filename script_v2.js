@@ -1,6 +1,34 @@
+
+
+let bars;
+let kick;
+let hats;
+let snare;
+
+function preload(){
+    var i=1
+    bars = new Image();
+    
+    bars.src='/images/bars_'+i+'.png';
+    
+    hats = new Image();
+    
+    hats.src='/images/hats_'+i+'.png';
+    
+    kick = new Image();
+    kick.src='/images/kick_'+i+'.png';
+    
+     snare = new Image();
+     snare.src='/images/snare_'+i+'.png'
+
+
+}
+
 window.onload =function(){
+    preload();
     canvas=document.getElementById('canvas');
     canvasContext = canvas.getContext('2d');
+
     setInterval(mainloop,1000/50);
 
 
@@ -26,30 +54,7 @@ const pos3_y=20+bar_h
 const pos4_x=posbar_x+3*voice_w
 const pos4_y=20+bar_h
 
-var i=1
-var bars = new Image();
-bars.onload=function(){
- bars.src=  this.src;
-}
-bars.src='/images/bars_'+i+'.png';
 
-var hats = new Image();
-hats.onload=function(){
-    hats.src=  this.src;
-   }
-hats.src='/images/hats_'+i+'.png';
-
-var kick = new Image();
-kick.onload=function(){
-    kick.src=  this.src;
-   }
-kick.src='/images/kick_'+i+'.png';
-
-var snare = new Image();
-snare.onload=function(){
-    snare.src=  this.src;
-   }
-snare.src='/images/snare_'+i+'.png'
 
 class Cuartina{
     constructor(x_pos,y_pos,v1,v2,v3,v4){
