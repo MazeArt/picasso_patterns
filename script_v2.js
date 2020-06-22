@@ -28,15 +28,27 @@ const pos4_y=20+bar_h
 
 var i=1
 var bars = new Image();
+bars.onload=function(){
+ bars.src=  this.src;
+}
 bars.src='/images/bars_'+i+'.png';
 
 var hats = new Image();
+hats.onload=function(){
+    hats.src=  this.src;
+   }
 hats.src='/images/hats_'+i+'.png';
 
 var kick = new Image();
+kick.onload=function(){
+    kick.src=  this.src;
+   }
 kick.src='/images/kick_'+i+'.png';
 
 var snare = new Image();
+snare.onload=function(){
+    snare.src=  this.src;
+   }
 snare.src='/images/snare_'+i+'.png'
 
 class Cuartina{
