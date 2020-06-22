@@ -31,11 +31,7 @@ var bars = new Image();
 bars.src='/images/bars_'+i+'.png';
 
 var hats = new Image();
-hats.onload=function(){
-    hats.src=this.src;
-};
-hats.src='/images/hats_'+i+'.png'
-
+hats.src='/images/hats_'+i+'.png';
 
 var kick = new Image();
 kick.src='/images/kick_'+i+'.png';
@@ -131,5 +127,7 @@ function switch_v(opt_fig,opt_i){
 }
 //https://www.youtube.com/watch?v=STdbrEojilM
 //https://www.youtube.com/watch?v=i2C1hrJMwz0 how to organize 
+
+// create Cuartina Class
 
 
