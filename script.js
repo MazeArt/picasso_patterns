@@ -1,6 +1,34 @@
+
+
+let bars;
+let kick;
+let hats;
+let snare;
+
+function preload(){
+    var i=1
+    bars = new Image();
+    
+    bars.src='images/bars_'+i+'.png';
+    
+    hats = new Image();
+    
+    hats.src='images/hats_'+i+'.png';
+    
+    kick = new Image();
+    kick.src='images/kick_'+i+'.png';
+    
+     snare = new Image();
+     snare.src='images/snare_'+i+'.png'
+
+
+}
+
 window.onload =function(){
+    preload();
     canvas=document.getElementById('canvas');
     canvasContext = canvas.getContext('2d');
+
     setInterval(mainloop,1000/50);
 
 
@@ -26,22 +54,7 @@ const pos3_y=20+bar_h
 const pos4_x=posbar_x+3*voice_w
 const pos4_y=20+bar_h
 
-var i=1
-var bars = new Image();
 
-bars.src='images/bars_'+i+'.png';
-
-var hats = new Image();
-
-hats.src='images/hats_'+i+'.png';
-
-var kick = new Image();
-
-kick.src='images/kick_'+i+'.png';
-
-var snare = new Image();
-
-snare.src='images/snare_'+i+'.png'
 
 class Cuartina{
     constructor(x_pos,y_pos,v1,v2,v3,v4){
@@ -52,14 +65,6 @@ class Cuartina{
         this.v3=v3;
         this.v4=v4;
     }
-  
-    // drawImg(src,x,y,w,h){
-        
-
-    //         canvasContext.drawImage(src,x,y,w,h)
-    //     }
-        
-    
     
     drawFigure(){
         drawImg(bars,posbar_x,posbar_y,bar_w,bar_h);
@@ -70,6 +75,15 @@ class Cuartina{
     }
    
     
+    drawImg(src,x,y,w,h){
+        canvasContext.drawImage(src,x,y,w,h)
+    }
+
+
+    //draw the 4 images
+    // drawImg(bars,posbar_x,posbar_y,bar_w,bar_h);
+
+
 }
 
 var cuartina1 = new Cuartina(20,20,kick);
@@ -96,16 +110,9 @@ function mainloop(){
 
 
 function drawImg(src,x,y,w,h){
-    if (src.complete){
-        canvasContext.drawImage(src,x,y,w,h)
-    } else {
-        src.onload=function(){
-            canvasContext.drawImage(src,x,y,w,h)
-        }
 
-    }
+    canvasContext.drawImage(src,x,y,w,h)
 
-   
 }
 
 function checkSelectedOption(f,i){
