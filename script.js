@@ -29,19 +29,19 @@ const pos4_y=20+bar_h
 var i=1
 var bars = new Image();
 
-bars.src='/images/bars_'+i+'.png';
+bars.src='images/bars_'+i+'.png';
 
 var hats = new Image();
 
-hats.src='/images/hats_'+i+'.png';
+hats.src='images/hats_'+i+'.png';
 
 var kick = new Image();
 
-kick.src='/images/kick_'+i+'.png';
+kick.src='images/kick_'+i+'.png';
 
 var snare = new Image();
 
-snare.src='/images/snare_'+i+'.png'
+snare.src='images/snare_'+i+'.png'
 
 class Cuartina{
     constructor(x_pos,y_pos,v1,v2,v3,v4){

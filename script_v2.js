@@ -9,17 +9,17 @@ function preload(){
     var i=1
     bars = new Image();
     
-    bars.src='../images/bars_'+i+'.png';
+    bars.src='images/bars_'+i+'.png';
     
     hats = new Image();
     
-    hats.src='../images/hats_'+i+'.png';
+    hats.src='images/hats_'+i+'.png';
     
     kick = new Image();
-    kick.src='../images/kick_'+i+'.png';
+    kick.src='images/kick_'+i+'.png';
     
      snare = new Image();
-     snare.src='../images/snare_'+i+'.png'
+     snare.src='images/snare_'+i+'.png'
 
 
 }
