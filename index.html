@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picasso Patterns</title>
-    
+
 </head>
+
 <body>
-    <header> <p>Prototipo Caligraphic Drum Patters </p>
+    <header>
+        <p style="font-size:20px;">Prototipo Caligraphic Drum Patters </p>
     </header>
+    <button onclick="generate_random_paradiddle()">Crear Random Paradiddle</button></p>
+    <p id="paradiddle" style="font-size:30px;"></p>
+    <button onclick="draw_figures()">Dibujar!</button></p>
+   
+   
+   
     <label for="f1_v1"></label>
-        <select name="f1_v1" id="f1_v1">
+    <select name="f1_v1" id="f1_v1">
         <option value="kick_str">K</option>
         <option value="snare_str">S</option>
         <option value="hats_str">H</option>
     </select>
     <label for="f1_v2"></label>
-        <select name="f1_v2" id="f1_v2">
+    <select name="f1_v2" id="f1_v2">
         <option value="kick_str">K</option>
         <option value="snare_str">S</option>
         <option value="hats_str">H</option>
@@ -28,21 +37,21 @@
         <option value="hats_str">H</option>
     </select>
     <label for="f1_v4"></label>
-        <select name="f1_v4" id="f1_v4">
-            <option value="kick_str">K</option>
-            <option value="snare_str">S</option>
-            <option value="hats_str">H</option>
-        </select>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp; <!block 2> 
-        <label for="f2_v1"></label>
-        <select name="f2_v1" id="f2_v1">
+    <select name="f1_v4" id="f1_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; <!block 2>
+    <label for="f2_v1"></label>
+    <select name="f2_v1" id="f2_v1">
         <option value="kick_str">K</option>
         <option value="snare_str">S</option>
         <option value="hats_str">H</option>
     </select>
     <label for="f2_v2"></label>
-        <select name="f2_v2" id="f2_v2">
+    <select name="f2_v2" id="f2_v2">
         <option value="kick_str">K</option>
         <option value="snare_str">S</option>
         <option value="hats_str">H</option>
@@ -54,23 +63,77 @@
         <option value="hats_str">H</option>
     </select>
     <label for="f2_v4"></label>
-        <select name="f2_v4" id="f2_v4">
+    <select name="f2_v4" id="f2_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; <!block 3>
+    <label for="f3_v1"></label>
+    <select name="f3_v1" id="f3_v1">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f3_v2"></label>
+    <select name="f3_v2" id="f3_v2">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f3_v3"></label>
+    <select name="f3_v3" id="f3_v3">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    <label for="f3_v4"></label>
+    <select name="f3_v4" id="f3_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; <!block 4>
+        <label for="f4_v1"></label>
+        <select name="f4_v1" id="f4_v1">
             <option value="kick_str">K</option>
             <option value="snare_str">S</option>
             <option value="hats_str">H</option>
         </select>
-    </br>   
-        <canvas id='canvas' style='border: 1px solid;' width= "800" height="600">
-        
+        <label for="f4_v2"></label>
+        <select name="f4_v2" id="f4_v2">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+        </select>
+        <label for="f4_v3"></label>
+        <select name="f4_v3" id="f4_v3">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+        </select>
+        <label for="f4_v4"></label>
+        <select name="f4_v4" id="f4_v4">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+        </select>
+        </br>
+        <canvas id='canvas' style='border: 1px solid;' width="800" height="600">
+
         </canvas>
- <script  src="script.js"></script>
-  
+        <script src="script.js"></script>
+        <script src="permutations.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
 
 
 
 
 
- </script>   
+                </script>
 </body>
+
 </html>

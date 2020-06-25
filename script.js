@@ -101,7 +101,7 @@ function mainloop() {
     //parameters are (figure,element)
     
     //creates a loop for v1_f1, v2_f1 etc...
-    var total_figures = 2;
+    var total_figures = 4;
     var f, j
     for (f = 1; f <= total_figures; f++) {
         for (j = 1; j <= 4; j++) {
@@ -112,12 +112,16 @@ function mainloop() {
 
     var cuartina1 = new Cuartina(1, 20, 20, f1_v1, f1_v2, f1_v3, f1_v4);
     var cuartina2 = new Cuartina(2, 20, 20, f2_v1, f2_v2, f2_v3, f2_v4);
+    var cuartina3 = new Cuartina(3, 20, 20, f3_v1, f3_v2, f3_v3, f3_v4);
+    var cuartina4 = new Cuartina(4, 20, 20, f4_v1, f4_v2, f4_v3, f4_v4);
 
     cuartina1.drawFigure();
     cuartina2.drawFigure();
+    cuartina3.drawFigure();
+    cuartina4.drawFigure();
 
     //print?
-    console.log("this is working")
+    //console.log("this is working")
 }
 
 
@@ -132,7 +136,7 @@ function checkSelectedOption(f, i) {
 
     var v1 = document.getElementById("f" + f + "_v" + i);
     var v1_box = v1.value
-    console.log("the v%s value is %s", i, v1_box)
+    //console.log("the v%s value is %s", i, v1_box)
     return v1_box;
 
 }
