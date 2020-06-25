@@ -5,6 +5,9 @@ let kick;
 let hats;
 let snare;
 
+//how to preload 
+// https://perishablepress.com/3-ways-preload-images-css-javascript-ajax/#:~:text=To%20do%20this%2C%20we%20simply,001.gif%22%3B%20img2.
+
 function preload() {
     var i = 1
     bars = new Image();
