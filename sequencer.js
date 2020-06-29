@@ -19,7 +19,8 @@ let isPlaying = false
 
 function sequencer(pattern_map) {
   //https://github.com/Tonejs/Tone.js#starting-audio
-
+  Tone.start()
+  Tone.context.latencyHint = 'playback'
 
    let kickBuff = new Tone.Buffer('sounds/kick.mp3');
   let snare_accBuff= new Tone.Buffer('sounds/snare_acc.mp3');
