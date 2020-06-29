@@ -20,10 +20,10 @@ function sequencer(pattern_map){
     //https://github.com/Tonejs/Tone.js#starting-audio
 
 
-   let kick_tone = new Tone.Player('/sounds/kick.mp3').toMaster();
-   let snare_acc_tone = new Tone.Player('./sounds/snare_acc.mp3').toMaster();
-   let snare_tone = new Tone.Player('./sounds/snare.mp3').toMaster();
-   let hh_tone = new Tone.Player('./sounds/hats_closed.mp3').toMaster();
+   let kick_tone = new Tone.Player('sounds/kick.mp3').toMaster();
+   let snare_acc_tone = new Tone.Player('sounds/snare_acc.mp3').toMaster();
+   let snare_tone = new Tone.Player('sounds/snare.mp3').toMaster();
+   let hh_tone = new Tone.Player('sounds/hats_closed.mp3').toMaster();
     //const hh_2 = new Tone.Player('./sounds/hats_closed.mp3').toMaster();
     let index=0;
 
