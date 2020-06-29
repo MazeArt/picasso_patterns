@@ -9,10 +9,6 @@ function play_moi(){
     sequencer(pattern_mapy);
 }
 
-let kickBuff = new Tone.Buffer('sounds/kick.mp3');
-let snare_accBuff= new Tone.Buffer('sounds/snare_acc.mp3');
-let snareBuff= new Tone.Buffer('sounds/snare.mp3');
-let hhBuff= new Tone.Buffer('sounds/hats_closed.mp3');
 
 
 
@@ -20,8 +16,12 @@ let isPlaying=false
 
 
 function sequencer(pattern_map){
-    //https://github.com/Tonejs/Tone.js#starting-audio
-
+  //https://github.com/Tonejs/Tone.js#starting-audio
+  let kickBuff = new Tone.Buffer('sounds/kick.mp3');
+  let snare_accBuff= new Tone.Buffer('sounds/snare_acc.mp3');
+  let snareBuff= new Tone.Buffer('sounds/snare.mp3');
+  let hhBuff= new Tone.Buffer('sounds/hats_closed.mp3');
+  
  let kick_tone = new Tone.Player(kickBuff).toMaster();
    let snare_acc_tone = new Tone.Player(snare_accBuff).toMaster();
    let snare_tone = new Tone.Player(snareBuff).toMaster();
