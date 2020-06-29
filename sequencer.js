@@ -9,8 +9,10 @@ function play_moi(){
     sequencer(pattern_mapy);
 }
 
-
-
+document.querySelector('button').addEventListener('click', async () => {
+	await Tone.start()
+	console.log('audio is ready')
+})
 
 let isPlaying=false
 
@@ -26,7 +28,6 @@ function sequencer(pattern_map){
    let snare_acc_tone = new Tone.Player(snare_accBuff).toMaster();
    let snare_tone = new Tone.Player(snareBuff).toMaster();
    let hh_tone = new Tone.Player(hhBuff).toMaster();
-
 
 
   //  let kick_tone = new Tone.Player('sounds/kick.mp3').toMaster();
