@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Picasso Patterns</title>
     
+    <title>Sound-Test</title>
+
 </head>
+
 <body>
-    <header> <p>H K H S </p>
+    <header>
+        <p>Make some Noise! </p>
     </header>
-    <label for="f1_v1"></label>
-        <select name="f1_v1" id="f1_v1">
-        <option value="kick_str">K</option>
-        <option value="snare_str">S</option>
-        <option value="hats_str">H</option>
-    </select>
-    <label for="f1_v2"></label>
-        <select name="f1_v2" id="f1_v2">
-        <option value="kick_str">K</option>
-        <option value="snare_str">S</option>
-        <option value="hats_str">H</option>
-    </select>
-    <label for="f1_v3"></label>
-    <select name="f1_v3" id="f1_v3">
-        <option value="kick_str">K</option>
-        <option value="snare_str">S</option>
-        <option value="hats_str">H</option>
-    </select>
-    <label for="f1_v4"></label>
-        <select name="f1_v4" id="f1_v4">
-            <option value="kick_str">K</option>
-            <option value="snare_str">S</option>
-            <option value="hats_str">H</option>
-        </select>
-    </br>   
-        <canvas id='canvas' style='border: 1px solid;' width= "800" height="600">
-        
-        </canvas>
- <script  src="script_v2.js"></script>
-  
+    <button onclick="play_me()">plai</button></p>
+    <button onclick="stopSeq()">eeehstop</button></p>
+    
+   
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.12/Tone.js'></script>
+    <script src="sequencer.js"></script>
+    
 
-
-
-
-
-
- </script>   
 </body>
+
 </html>

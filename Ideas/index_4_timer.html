@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound-Test</title>
+
+</head>
+
+<body>
+    <header>
+        <p>Make some Noise! </p>
+    </header>
+    <h1 id="timer">00 : 00 . 000</h1>
+    <button onclick="hit_me()">trigger_sound</button></p>
+    <button onclick="play_me()">play!</button></p>
+
+    <div id="drumkit" class="drumkit"></div>
+
+    <script type="text/javascript">
+        var data = {
+            'K': { name: 'Kick', sound: 'sounds/kick.mp3' },
+            'S': { name: 'Snare', sound: 'sounds/snare_acc.mp3' },
+            'H': { name: 'ClosedHat', sound: 'sounds/hats_closed.mp3' }
+
+        };
+
+        var drumkit = document.getElementById('drumkit');
+
+        function hit_me(voice) { //voice is 'K','S','H'
+            var audio = new Audio();
+            audio.src = data[voice].sound;
+            audio.play();
+
+        }
+        function play_me() {
+            bpm = 120
+            var metro = new Metronome(bpm)
+            console.log("bpm is: ", bpm);
+            metro.start();
+            var kick_bar_hitted=false
+            var snare_bar_hitted=false
+            setInterval(checkTime, 1);
+
+            function checkTime() {
+                
+                if (metro.bar == 1 || metro.bar == 3 ) {
+                    console.log(kick_bar_hitted)
+                    if(!kick_bar_hitted){
+                        console.log('THIS IS A KICK HIT !!', metro.bar)
+                        kick_bar_hitted=true;
+                        //last_bar_val=metro.bar;
+                        hit_me('K');
+                    }
+                }
+                else{
+                    kick_bar_hitted=false;
+                }
+
+                if (metro.bar == 2 || metro.bar == 4) {
+                    console.log(snare_bar_hitted)
+                    if(!snare_bar_hitted){
+                        console.log('THIS IS A SNARE HIT !!', metro.bar)
+                        snare_bar_hitted=true;
+                        //last_bar_val=metro.bar;
+                        hit_me('S');
+                    }
+                }
+                else{
+                    snare_bar_hitted=false;
+                }    
+            }
+        }
+
+
+    </script>
+    <script src="stopwatch.js"></script>
+</body>
+
+</html>

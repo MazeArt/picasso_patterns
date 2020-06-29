@@ -24,6 +24,9 @@ function preload() {
     snare = new Image();
     snare.src = 'images/snare_' + i + '.png'
 
+    snare_acc = new Image();
+    snare_acc.src = 'images/snare_acc_' + i + '.png'
+
 
 }
 
@@ -102,7 +105,7 @@ class Cuartina {
 function mainloop() {
 
     //parameters are (figure,element)
-    
+
     //creates a loop for v1_f1, v2_f1 etc...
     var total_figures = 4;
     var f, j
@@ -111,7 +114,7 @@ function mainloop() {
             window['f' + f + '_v' + j] = switch_v(f, j)
         }
     }
- 
+
 
     var cuartina1 = new Cuartina(1, 20, 20, f1_v1, f1_v2, f1_v3, f1_v4);
     var cuartina2 = new Cuartina(2, 20, 20, f2_v1, f2_v2, f2_v3, f2_v4);
@@ -155,7 +158,10 @@ function switch_v(opt_fig, opt_i) {
             v1 = kick;
             break;
         case 'snare_str':
-            v1 = snare
+            v1 = snare;
+            break;
+        case 'snare_acc_str':
+            v1 = snare_acc;
             break;
         default:
             v1 = kick;
