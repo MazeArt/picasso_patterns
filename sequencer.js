@@ -9,10 +9,10 @@ function play_moi() {
   sequencer(pattern_mapy);
 }
 
-// document.querySelector('#init_button').addEventListener('click', async () => {
-//   await Tone.start()
-//   console.log('audio is ready')
-// })
+document.querySelector('#init_button').addEventListener('click', async () => {
+  await Tone.start()
+  console.log('audio is ready')
+})
 
 let isPlaying = false
 
