@@ -173,7 +173,7 @@ function play_me() {
         isPlaying = false
     } else {
         console.log(isPlaying)
-        sequencer(pattern_map);
+        sequencer(pattern_map,samples);
 
     }
 

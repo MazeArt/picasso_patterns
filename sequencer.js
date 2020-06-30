@@ -9,31 +9,23 @@ function play_moi() {
   sequencer(pattern_mapy);
 }
 
-document.querySelector('#init_button').addEventListener('click', async () => {
+document.querySelector('#start_button').addEventListener('click', async () => {
   await Tone.start()
   console.log('audio is ready')
 })
 
 let isPlaying = false
 
+let samples = {
+  kick_tone: new Tone.Player('sounds/kick.mp3').toMaster(),
+  snare_acc_tone: new Tone.Player('sounds/snare_acc.mp3').toMaster(),
+  snare_tone: new Tone.Player('sounds/snare.mp3').toMaster(),
+  hh_tone: new Tone.Player('sounds/hats_closed.mp3').toMaster(),
+}
 
 function sequencer(pattern_map) {
   //https://github.com/Tonejs/Tone.js#starting-audio
-//  Tone.start()
-  Tone.context.latencyHint = 'playback'
-
-   let kickBuff = new Tone.Buffer('sounds/kick.mp3');
-  let snare_accBuff= new Tone.Buffer('sounds/snare_acc.mp3');
-  let snareBuff= new Tone.Buffer('sounds/snare.mp3');
-  let hhBuff= new Tone.Buffer('sounds/hats_closed.mp3');
-
-  
-   let kick_tone = new Tone.Player(kickBuff).toMaster();
-   let snare_acc_tone = new Tone.Player(snare_accBuff).toMaster();
-   let snare_tone = new Tone.Player(snareBuff).toMaster();
-   let hh_tone = new Tone.Player(hhBuff).toMaster();
-  
-  
+Tone.context.latencyHint = 'playback'
 
   let index = 0;
 
@@ -51,25 +43,28 @@ function sequencer(pattern_map) {
     }
     isPlaying = true
     let step = index % 16;
-    let kickInput = pattern_map.kick_arr[step];
     console.log(step);
-    if (kickInput) {
-      kick_tone.start(time);
+    
+    if (pattern_map.kick_arr[step]) {
+      samples.kick_tone.start(time);
       console.log(step, " kick!")
     }
+    
     if (pattern_map.snare_arr[step]) {
-      snare_tone.volume.value = -22
-      snare_tone.start(time);
+      samples.snare_tone.volume.value = -22
+      samples.snare_tone.start(time);
       console.log(step, " snare!")
     }
+    
     if (pattern_map.snare_acc_arr[step]) {
       // snare_acc.volume.value = 0
-      snare_acc_tone.start(time);
+      samples.snare_acc_tone.start(time);
       console.log(step, " snare_acc!")
     }
+    
     if (pattern_map.hats_arr[step]) {
-      hh_tone.volume.value = -14
-      hh_tone.start(time);
+      samples.hh_tone.volume.value = -14
+      samples.hh_tone.start(time);
 
       console.log(step, " hh!")
     }
