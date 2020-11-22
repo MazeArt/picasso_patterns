@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picasso Patterns</title>
+
+</head>
+
+<body>
+    <header>
+        <p style="font-size:20px;">MIDI Dual Drumstick Training</p>
+    </header>
+    <button onclick="generate_random_paradiddle()">Crear Random Paradiddle</button></p>
+    <div id="paradiddle1" style="font-size:30px;"></div> <div id="paradiddle2" style="font-size:30px;"></div> 
+        <div id="paradiddle3" style="font-size:30px;"></div>  <div id="paradiddle4" style="font-size:30px;"></div>
+   
+    <button id="start_button" onclick="play_me()" >Play it !</button>
+    
+    </p>
+   
+   
+  
+   
+    <label for="f1_v1"></label>
+    <select name="f1_v1" id="f1_v1">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+        
+    </select>
+    <label for="f1_v2"></label>
+    <select name="f1_v2" id="f1_v2">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f1_v3"></label>
+    <select name="f1_v3" id="f1_v3">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f1_v4"></label>
+    <select name="f1_v4" id="f1_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; <!block 2>
+    <label for="f2_v1"></label>
+    <select name="f2_v1" id="f2_v1">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f2_v2"></label>
+    <select name="f2_v2" id="f2_v2">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f2_v3"></label>
+    <select name="f2_v3" id="f2_v3">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f2_v4"></label>
+    <select name="f2_v4" id="f2_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp; <!block 3>
+    <label for="f3_v1"></label>
+    <select name="f3_v1" id="f3_v1">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f3_v2"></label>
+    <select name="f3_v2" id="f3_v2">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f3_v3"></label>
+    <select name="f3_v3" id="f3_v3">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    <label for="f3_v4"></label>
+    <select name="f3_v4" id="f3_v4">
+        <option value="kick_str">K</option>
+        <option value="snare_str">S</option>
+        <option value="hats_str">H</option>
+        <option value="snare_acc_str">A</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; <!block 4>
+        <label for="f4_v1"></label>
+        <select name="f4_v1" id="f4_v1">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+            <option value="snare_acc_str">A</option>
+        </select>
+        <label for="f4_v2"></label>
+        <select name="f4_v2" id="f4_v2">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+            <option value="snare_acc_str">A</option>
+        </select>
+        <label for="f4_v3"></label>
+        <select name="f4_v3" id="f4_v3">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+            <option value="snare_acc_str">A</option>
+        </select>
+        <label for="f4_v4"></label>
+        <select name="f4_v4" id="f4_v4">
+            <option value="kick_str">K</option>
+            <option value="snare_str">S</option>
+            <option value="hats_str">H</option>
+            <option value="snare_acc_str">A</option>
+        </select>
+        </br>
+        <canvas id='canvas' style='border: 1px solid;' width="800" height="600">
+
+        </canvas>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.7.12/Tone.js'></script>
+        <script src="sequencer.js"></script>
+        <script src="script.js"></script>
+        <script src="permutations.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
+
+            
+</body>
+
+</html>
